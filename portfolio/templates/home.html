@@ -14,7 +14,37 @@
             Soy Desarrollador Web Full Stack
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aspernatur sapiente, a porro quia dolorem minus! Perferendis, voluptas? Minus unde ipsam delectus corrupti expedita eius quae, repudiandae eveniet aut, ipsa enim quaerat quo temporibus, distinctio harum doloribus consectetur accusamus voluptatibus! Esse blanditiis velit deleniti quas expedita. Aspernatur qui corrupti reiciendis maxime dolore harum enim! Dignissimos recusandae ducimus deleniti ipsa nihil nemo possimus nesciunt aliquid, rem quis repellat reprehenderit voluptatem assumenda sit? Nemo explicabo vel omnis alias, quis culpa. Officiis repellendus aliquam aperiam, ipsa, nobis sequi nulla iure dolore quia at pariatur? Temporibus magnam eos quisquam neque consequatur quidem consequuntur nobis.
+            Mi especialización se encuentra en el ámbito del Front-End y Back-End, y cuento con una amplia experiencia en el diseño y desarrollo de componentes y páginas web utilizando las tecnologías más actuales. Entre las herramientas y tecnologías que manejo se incluyen JavaScript, Typescript, Angular, Bootstrap, Django, Django Rest Framework, PHP, SQL, entre otras destacadas.
+        </p>
+        <p class="py-3">
+            Además, estoy abierto a la exploración de proyectos independientes, donde puedo aplicar mis habilidades y conocimientos de desarrollo web de manera autónoma. Siempre estoy en busca de oportunidades para aprender y mejorar, tanto en mi trabajo individual como en colaboración con equipos.
+        </p>
+        <p>
+            Aquí hay algunas de las tecnologías en las que he estado trabajando recientemente:
+        </p>
+                <div class="row py-2">
+                    <ul class="col-5 col-md-3">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                    <ul class="col-5 col-md-3">
+                        <li>JavaScript</li>
+                        <li>Angular</li>
+                        <li>GIT</li>
+                    </ul>
+                    <ul class="col-5 col-md-3">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>Django Rest</li>
+                    </ul>
+                    <ul class="col-5 col-md-2">
+                        <li>PHP</li>
+                        <li>SQL</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
         </p>
         <a href="{% static 'portfolio/cv.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3" target="_blank">Download CV</a>
 </section>
@@ -23,17 +53,11 @@
     <h3 class="display-4">
         My Projects
     </h3>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, doloribus?
-    </p>
 
 {% for project in projects %}
     <div class="col-md-4 p-4">
         <div class="card bg-black card-project">
             <img src="{{project.image.url}}" alt="" class="card-img-top">
-            <p>
-                {{project.image.url}}
-            </p>
             <div class="card-body">
                 <h2>
                     {{ project.title }}
@@ -42,7 +66,7 @@
                     {{ project.description }}
                 </p>
                 {% if project.url %}
-                    <a href="{{ project.url }}" class="btn btn-light btn-sm" target="_blank">
+                    <a href="{{ project.url }}" class="btn btn-primary rounded-0" target="_blank">
                         See project
                     </a>
                 {% endif %}
