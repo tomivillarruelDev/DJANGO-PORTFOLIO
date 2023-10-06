@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="row bg-black">
+    <div class="col-md-4">
+        {% load static %}
+        <img src="{% static 'portfolio/profile.png' %}" alt="" class="img-fluid">
+    </div>
+    <div class="col-md-8 my-auto">
+        <h1 class="display-5">
+            Hola, mi nombre es 
+            <strong class="fw-bold fst-italic">Tomás Villarruel</strong>
+        </h1>
+        <p class="lead">
+            Soy Desarrollador Web Full Stack
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aspernatur sapiente, a porro quia dolorem minus! Perferendis, voluptas? Minus unde ipsam delectus corrupti expedita eius quae, repudiandae eveniet aut, ipsa enim quaerat quo temporibus, distinctio harum doloribus consectetur accusamus voluptatibus! Esse blanditiis velit deleniti quas expedita. Aspernatur qui corrupti reiciendis maxime dolore harum enim! Dignissimos recusandae ducimus deleniti ipsa nihil nemo possimus nesciunt aliquid, rem quis repellat reprehenderit voluptatem assumenda sit? Nemo explicabo vel omnis alias, quis culpa. Officiis repellendus aliquam aperiam, ipsa, nobis sequi nulla iure dolore quia at pariatur? Temporibus magnam eos quisquam neque consequatur quidem consequuntur nobis.
+        </p>
+        <a href="{% static 'portfolio/cv.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3" target="_blank">Download CV</a>
+</section>
+
+<section class="row my-4 text-center">
+    <h3 class="display-4">
+        My Projects
+    </h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, doloribus?
+    </p>
+
+{% for project in projects %}
+    <div class="col-md-4 p-4">
+        <div class="card bg-black card-project">
+            <img src="{{project.image.url}}" alt="" class="card-img-top">
+            <p>
+                {{project.image.url}}
+            </p>
+            <div class="card-body">
+                <h2>
+                    {{ project.title }}
+                </h2>
+                <p>
+                    {{ project.description }}
+                </p>
+                {% if project.url %}
+                    <a href="{{ project.url }}" class="btn btn-light btn-sm" target="_blank">
+                        See project
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
+
+
+
+
